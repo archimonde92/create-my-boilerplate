@@ -8,13 +8,11 @@ const callback = () => {
         console.log(`This cron will work every 1 seconds`)
     } catch (e) {
         console.log(e)
-    } finally {
-        setTimeout(callback, 1000);
-    }
+    } 
 
 }
 
-const cron = new CCron(ECronNameList.cron_interval_example, 0, callback)
+const cron = new CCron(ECronNameList.cron_interval_example, 1000, callback)
 
 export {
     cron as cron_interval_example
