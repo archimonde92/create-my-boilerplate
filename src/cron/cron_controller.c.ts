@@ -1,7 +1,7 @@
 import { CCron } from "./cron.c";
 
 class CCronController {
-    crons: CCron[]
+    crons: CCron[] = []
     add = (cron: CCron) => {
         const found_cron = this.crons.find(el => el.id)
         if (found_cron) {
