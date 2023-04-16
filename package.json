@@ -15,9 +15,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cron": "^2.0.1",
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
+    "cron": "^2.3.0",
+    "mongodb": "^5.2.0",
     "rimraf": "^5.0.0"
   }
 }

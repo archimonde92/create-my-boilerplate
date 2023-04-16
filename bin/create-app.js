@@ -2,6 +2,7 @@
 
 const { execSync } = require('child_process');
 const path = require('path');
+const packageJson = require('../package.json');
 const fs = require('fs');
 
 if (process.argv.length < 3) {
@@ -40,10 +41,10 @@ async function main() {
         console.log('Removing useless files');
         execSync('npx rimraf ./.git');
         fs.rm(path.join(projectPath, 'bin'), { recursive: true });
-        fs.unlinkSync(path.join(appPath, 'package.json'));
+        fs.unlinkSync(path.join(projectPath, 'package.json'));
 
         console.log('Build package.json ...')
-        buildPackageJson()
+        buildPackageJson(packageJson, projectName)
         console.log('The installation is done, this is ready to use !');
 
     } catch (error) {
@@ -54,64 +55,50 @@ main();
 
 function buildPackageJson(packageJson, folderName) {
     const {
-      bin,
-      keywords,
-      license,
-      homepage,
-      repository,
-      bugs,
-      ...newPackage
+        bin,
+        keywords,
+        license,
+        homepage,
+        repository,
+        bugs,
+        ...newPackage
     } = packageJson;
-  
+
     Object.assign(newPackage, {
-      name: folderName,
-      version: '1.0.0',
-      description: '',
-      author: '',
-      scripts: {
-        start:
-          'npm run clean && parcel serve public/index.html --dist-dir development -p 3000',
-        build:
-          'rimraf ./build && parcel build public/*.html --dist-dir build --public-url ./',
-        test: 'jest',
-        clean: 'rimraf ./development && rimraf ./.parcel-cache',
-        prettify: 'npx prettier --write ./src/',
-      },
-      devDependencies: {
-        '@parcel/transformer-sass': '^2.0.0-beta.2',
-        '@testing-library/dom': '^7.30.3',
-        '@testing-library/jest-dom': '^5.11.10',
-        '@testing-library/react': '^11.2.6',
-        autoprefixer: '^10.2.5',
-        'babel-preset-react-app': '^10.0.0',
-        jest: '^26.6.3',
-        'jest-cli': '^26.6.3',
-        parcel: '^2.0.0-beta.2',
-        prettier: '2.2.1',
-      },
-      dependencies: {
-        babel: '^6.23.0',
-        'jest-styled-components': '^7.0.3',
-        'normalize.css': '^8.0.1',
-        'prop-types': '^15.7.2',
-        react: '^17.0.2',
-        'react-dom': '^17.0.2',
-        'react-router-dom': '^5.2.0',
-        rimraf: '^3.0.2',
-        'styled-components': '^5.2.3',
-      },
-      postcss: {
-        plugins: {
-          autoprefixer: {
-            overrideBrowserslist: ['> 1%', 'last 4 versions', 'ie >= 9'],
-          },
+        name: folderName,
+        version: '1.0.0',
+        description: '',
+        author: 'archimonde92',
+        scripts: {
+            "scripts": "node script.mjs",
+            "test": "ts-node src/test/index.ts",
+            "build": "rm -rf dist && tsc",
+            "start": "node dist/index.js",
+            "dev": "ts-node src/index.ts",
+            "dep": "docker-compose -f docker-compose.yml up --build -d",
+            "dep:log": "docker-compose -f docker-compose.yml up --build"
         },
-      },
+        "devDependencies": {
+            "dotenv": "^16.0.3",
+            "nodemon": "^2.0.20",
+            "ts-node": "^10.9.1",
+            "typescript": "^4.9.5"
+        },
+        "dependencies": {
+            "@sentry/node": "^7.37.1",
+            "apollo-server": "^3.11.1",
+            "bignumber.js": "^9.1.1",
+            "cron": "^2.2.0",
+            "ioredis": "^5.3.1",
+            "mongodb": "^5.0.1",
+            "telegraf": "^4.11.2",
+            "web3": "^1.8.2"
+        },
     });
-  
+
     fs.writeFileSync(
-      `${process.cwd()}/package.json`,
-      JSON.stringify(newPackage, null, 2),
-      'utf8'
+        `${process.cwd()}/package.json`,
+        JSON.stringify(newPackage, null, 2),
+        'utf8'
     );
-  }
+}
