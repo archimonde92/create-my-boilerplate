@@ -1,4 +1,4 @@
-import { CCron } from "./cron.c";
+import { CCron } from "./class/cron.c";
 import { ECronNameList } from "./_cron_name_list";
 
 

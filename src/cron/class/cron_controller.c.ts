@@ -3,7 +3,7 @@ import { CCron } from "./cron.c";
 class CCronController {
     crons: CCron[] = []
     add = (cron: CCron) => {
-        const found_cron = this.crons.find(el => el.id)
+        const found_cron = this.crons.find(el => el.id === cron.id)
         if (found_cron) {
             console.log(`This cron id = ${cron.id} already added!`)
             return;
@@ -13,8 +13,8 @@ class CCronController {
         }
     }
     remove = (cron: CCron) => {
-        const found_cron_index = this.crons.findIndex(el => el.id)
-        if (found_cron_index) {
+        const found_cron_index = this.crons.findIndex(el => el.id === cron.id)
+        if (found_cron_index > -1) {
             this.crons.splice(found_cron_index, 1)
             console.log(`Removed cron id = ${cron.id} successful!`)
             return;

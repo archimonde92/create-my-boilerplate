@@ -1,5 +1,5 @@
 import { cron_example } from "./cron.example";
-import { CCronController } from "./cron_controller.c";
+import { CCronController } from "./class/cron_controller.c";
 import { cron_interval_example } from "./cron_interval.example";
 
 

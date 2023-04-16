@@ -1,5 +1,5 @@
 import { CronJob } from "cron"
-import { InitCron } from "./helper"
+import { InitCron } from "../helper"
 
 class CCron {
     private _cron: CronJob | undefined = undefined
