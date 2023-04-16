@@ -15,7 +15,7 @@ class CCron {
         }
     }
     private _interval = async () => {
-        if (this.is_stop) {
+        if (!this.is_stop) {
             this._callback()
         } else {
             setTimeout(() => {
