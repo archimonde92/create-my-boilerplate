@@ -1,5 +1,5 @@
-import { REDIS_PREFIX } from "../../config";
-import { ioredis } from "./redis";
+import { REDIS_PREFIX } from "../../../config";
+import { ioredis } from "../redis";
 
 export const create_key_with_prefix = (key: string) => `${REDIS_PREFIX}.${key}`;
 export const ClearRedis = (key: string) => {

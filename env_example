@@ -8,15 +8,15 @@ IS_USE_PLAYGROUND=true
 
 # ----- Sentry ----- #
 SERVER_NAME=dex_server_dev
-SENTRY_DNS=https://73053f406e6d44cabfdbe4285bb73fd2@o1080067.ingest.sentry.io/6085433
+SENTRY_DNS=
 
 
 # ----- Mongo ----- #
-MONGO_URI=mongodb://clusterAdmin:MNFbuuEty6vkKdLF@mongodb-dev-2-servers-vm-0:27017,mongodb-dev-2-servers-vm-1:27017,mongodb-dev-2-servers-vm-2:27017,mongodb-dev-2-arbiters-vm-0:27017/dex_server_dev?authSource=admin&replicaSet=rs0&retryWrites=true&w=majority
+MONGO_URI=
 MONGO_DB_NAME=dex_server_dev
 
 # ----- Redis ----- #
-REDIS_URI=redis://:Matkhau12!@34.87.173.99:6379
+REDIS_URI=
 REDIS_DB_NUMBER=0
 REDIS_PREFIX=dex_server_dev
 
