@@ -92,6 +92,9 @@ function buildPackageJson(packageJson, folderName) {
             "ioredis": "^5.3.1",
             "mongodb": "^5.0.1",
             "telegraf": "^4.11.2",
+            "@fastify/swagger": "^8.3.1",
+            "@fastify/swagger-ui": "^1.8.0",
+            "fastify": "^4.15.0",
             "web3": "^1.8.2"
         },
     });

@@ -26,6 +26,7 @@ export const TELEGRAM_BOT_TOKEN = getEnvString("TELEGRAM_BOT_TOKEN");
 export const PYTH_SERVICE_ENDPOINT = getEnvString("PYTH_SERVICE_ENDPOINT");
 
 export const REDIS_DB_NUMBER = getIntFromEnv("REDIS_DB_NUMBER");
+export const FASTIFY_PORT = getIntFromEnv("FASTIFY_PORT");
 
 export const RECAPTCHA_SECRET_KEY = getEnvString("RECAPTCHA_SECRET_KEY");
 export const TIME_UPDATE_POOL_BALANCE = getEnvString(
@@ -70,5 +71,3 @@ export const PRIVATE_KEYS_BOT_TRIGGER_TRADING_CONTRACT = getArrStringFromEnv(
 	"PRIVATE_KEYS_BOT_TRIGGER_TRADING_CONTRACT",
 	",",
 );
-
-
