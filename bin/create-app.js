@@ -45,8 +45,8 @@ async function main() {
         fs.unlinkSync(path.join(projectPath, 'package.json'));
         console.log('Build package.json ...')
         buildPackageJson(packageJson, projectName)
-        console.log('The installation is done, this is ready to use !');
         execSync('npm i --save-dev dotenv ts-node typescript');
+        console.log('The installation is done, this is ready to use !');
     } catch (error) {
         console.log(error);
     }
@@ -78,6 +78,7 @@ function buildPackageJson(packageJson, folderName) {
             "dep": "docker-compose -f docker-compose.yml up --build -d",
             "dep:log": "docker-compose -f docker-compose.yml up --build"
         },
+        "devDependencies":{},
         "dependencies": {
             "@sentry/node": "^7.37.1",
             "apollo-server": "^3.11.1",
