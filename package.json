@@ -1,6 +1,6 @@
 {
 	"name": "archi-boilerplate",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Create boilerplage",
 	"main": "index.js",
 	"bin": {
@@ -20,6 +20,7 @@
 		"parcel-bundler": "^1.12.5"
 	},
 	"dependencies": {
-		"rimraf": "^5.0.0"
+		"rimraf": "^5.0.0",
+		"viem": "^0.3.3"
 	}
 }

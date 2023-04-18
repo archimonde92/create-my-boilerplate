@@ -46,6 +46,7 @@ async function main() {
         console.log('Build package.json ...')
         buildPackageJson(packageJson, projectName)
         execSync('npm i --save-dev dotenv ts-node typescript');
+        execSync('npm i viem');
         console.log('The installation is done, this is ready to use !');
     } catch (error) {
         console.log(error);
