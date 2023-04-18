@@ -1,31 +1,25 @@
 {
-  "name": "create-my-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "bin": {
-    "create-boilerplate": "./bin/create-app.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build index.js",
-    "start-fastify": "fastify start -l info src/server/app.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/cron": "^2.0.1",
-    "parcel-bundler": "^1.12.5"
-  },
-  "dependencies": {
-    "@fastify/swagger": "^8.3.1",
-    "@fastify/swagger-ui": "^1.8.0",
-    "cron": "^2.3.0",
-    "fastify": "^4.15.0",
-    "ioredis": "^5.3.2",
-    "mongodb": "^5.2.0",
-    "rimraf": "^5.0.0"
-  }
+	"name": "archi-boilerplate",
+	"version": "1.0.0",
+	"description": "Create boilerplage",
+	"main": "index.js",
+	"bin": {
+		"archi-boilerplate": "./bin/create-app.js"
+	},
+	"scripts": {
+		"scripts": "node script.mjs",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "parcel index.html",
+		"build": "parcel build index.js",
+		"start-fastify": "fastify start -l info src/server/app.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"parcel-bundler": "^1.12.5"
+	},
+	"dependencies": {
+		"rimraf": "^5.0.0"
+	}
 }

@@ -7,9 +7,9 @@ enum ESwaggerTags {
 const swagger_opts: SwaggerOptions = {
 	swagger: {
 		info: {
-			title: "Test swagger",
-			description: "Testing the Fastify swagger API",
-			version: "0.1.0",
+			title: "Test swagger", //Changeable
+			description: "Testing the Fastify swagger API", //Changeable
+			version: "0.1.0", //Changeable
 		},
 		externalDocs: {
 			url: "https://swagger.io",
