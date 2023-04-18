@@ -43,11 +43,10 @@ async function main() {
         execSync('npx rimraf ./.git');
         fs.rm(path.join(projectPath, 'bin'), { recursive: true });
         fs.unlinkSync(path.join(projectPath, 'package.json'));
-
         console.log('Build package.json ...')
         buildPackageJson(packageJson, projectName)
         console.log('The installation is done, this is ready to use !');
-
+        execSync('npm i --save-dev dotenv ts-node typescript');
     } catch (error) {
         console.log(error);
     }
@@ -78,12 +77,6 @@ function buildPackageJson(packageJson, folderName) {
             "dev": "ts-node src/index.ts",
             "dep": "docker-compose -f docker-compose.yml up --build -d",
             "dep:log": "docker-compose -f docker-compose.yml up --build"
-        },
-        "devDependencies": {
-            "dotenv": "^16.0.3",
-            "nodemon": "^2.0.20",
-            "ts-node": "^10.9.1",
-            "typescript": "^4.9.5"
         },
         "dependencies": {
             "@sentry/node": "^7.37.1",
