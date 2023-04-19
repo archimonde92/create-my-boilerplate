@@ -1,7 +1,7 @@
 import Redis from "ioredis";
-import { create_key_with_prefix } from "./redis";
 import { REDIS_PREFIX, REDIS_URI } from "../../../config";
 import { successConsoleLog } from "../../../lib/color-log";
+import { create_key_with_prefix } from ".";
 export let ioredis: Redis;
 
 export const initRedis = async (db_number = 0) => {

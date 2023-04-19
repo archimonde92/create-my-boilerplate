@@ -1,6 +1,8 @@
-import { startFastifyServer } from "../server/fastify"
+import { sha256 } from "../lib/utils";
+import { startFastifyServer } from "../server/fastify";
 
 const test = async () => {
-    startFastifyServer()
-}
-test()
+	const sheet_id="1L-PmEA1xTk2Abw_ce9wTHmbHbe-H1zQzxm2uEARKdLQ"
+
+};
+test();
