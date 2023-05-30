@@ -1,0 +1,35 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scripts": "node script.mjs",
+    "test": "ts-node src/test/index.ts",
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dep": "docker-compose -f docker-compose.yml up --build -d",
+    "dep:log": "docker-compose -f docker-compose.yml up --build"
+  },
+  "author": "archimonde92",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^8.3.1",
+    "@fastify/swagger-ui": "^1.8.0",
+    "@sentry/node": "^7.37.1",
+    "apollo-server": "^3.11.1",
+    "bignumber.js": "^9.1.1",
+    "cron": "^2.2.0",
+    "fastify": "^4.15.0",
+    "ioredis": "^5.3.1",
+    "mongodb": "^5.0.1",
+    "telegraf": "^4.11.2",
+    "viem": "^0.3.3",
+    "web3": "^1.8.2"
+  }
+}

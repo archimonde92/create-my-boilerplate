@@ -1,0 +1,41 @@
+# ----- Environment ----- #
+NODE_ENV=local
+SERVER_CODE=DEX
+
+# ----- Grapql ----- #
+GRAPHQL_PORT=7001
+IS_USE_PLAYGROUND=true
+
+# ----- Sentry ----- #
+SERVER_NAME=dex_server_dev
+SENTRY_DNS=
+
+
+# ----- Mongo ----- #
+MONGO_URI=
+MONGO_DB_NAME=dex_server_dev
+
+# ----- Redis ----- #
+REDIS_URI=
+REDIS_DB_NUMBER=0
+REDIS_PREFIX=dex_server_dev
+
+# ----- Blockchain ----- #
+WEB3_PROVIDER=https://goerli-rollup.arbitrum.io/rpc	
+TRADING_CONTRACT_START_BLOCK=7628899
+TRADING_CONTRACT_STEP_BLOCK=500
+TRADING_CONTRACT_ADDRESS=0xcC3188464c35b7ffF879E1EAd58E2fb4A2f20498
+ANTI_REORG_BLOCK_NUMBER=0
+AVG_BLOCK_TIME_SEC=1
+
+
+# ----- Telegraf ----- #
+TELEGRAM_BOT_TOKEN=5833627923:AAGOzuNHyaOsrckF5OB2-ejCZdBJRWdyW54
+ENABLE_TELEGRAM=true
+GROUP_ID_TELEGRAM=-877186414
+
+# ----- Other Config ----- #
+IS_DEBUG=true
+DEBUG_LEVEL=info,warning,error,table
+IS_FORK=false
+IS_SERVER_MAINTAINED=false

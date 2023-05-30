@@ -1,6 +1,6 @@
 {
 	"linter": {
-		"enabled": false,
+		"enabled": true,
 		"rules": {
 			"all": true,
 			"suspicious": {
@@ -8,6 +8,9 @@
 			},
 			"style": {
 				"noUnusedTemplateLiteral": "off"
+			},
+			"nursery": {
+				"noUselessCatch": "off"
 			}
 		}
 	}
